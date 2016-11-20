@@ -9,7 +9,6 @@ ini_set('display_errors', 1);
 // signal handler function
 function sig_handler($signo)
 {
-
      echo 'handler called for signal: ' . $signo . "\n";
 }
 
@@ -27,7 +26,7 @@ echo"Generating signal SIGUSR1 to self...\n";
 // posix_* functions require the posix extension
 posix_kill(posix_getpid(), SIGUSR1);
 
-while(1 == 1){
+while(1){
 	echo 'waiting for signals' . "\n";
     sleep(5);
 }
